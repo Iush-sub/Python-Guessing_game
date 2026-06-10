@@ -12,11 +12,9 @@ def home():
     if w==1:
         print("\n")
         print("*** Rules/Guide For The Game >_< ***")
-        print("1.The computer chooses a number from given range")
-        print("2.You will get 5 chances to guess the number")
-        print("3.On guessing it in first try you will be rewarded 100 points")
-        print("4.On second try you will get 50, on third 25, fourth 10 and at fifth you will get 5 ")
-        print("5.The game is also multiplayer with three modes of difficultly")
+        print("1.The computer chooses a number from 1 to 100")
+        print("2.You will get 10/5/3 chances to guess the number")
+        print("5.The game is  with three modes of difficultly")
         print("*** Good luck there Sherlock Homes ;) ***")
         print("\n")
         p=int(input("Press 1 To continue the game -->"))
@@ -27,9 +25,9 @@ def home():
 def mode():
     print("***select your difficultly***")
     print("\n")
-    print("Easy   --> Press E")
-    print("Medium --> Press M")
-    print("Hard   --> Press H")
+    print("Easy(10 try)   --> Press E")
+    print("Medium(5 try) --> Press M")
+    print("Hard(3 try)   --> Press H")
     print("Exit   --> Press 0")
     print("\n")
     p=input("Enter here -->")
@@ -61,23 +59,38 @@ def exit_app():
         mode()
 
 def easy_game():
-    x = random.randint(1,10)
-    y = int(input("Enter your first guess (1 to 10): "))
-    for i in range(1,4):
+    x = random.randint(1,100)
+    y = int(input("Enter your first guess (1 to 100): "))
+    for i in range(1,11):
         if x==y:
             if i==1:
-                print("100 points. first try")
+                print("Correct. attempt 1")
                 exit_app()
             elif i==2:
-                print("50 points. second try")
+                print("Correct. attempt 2")
             elif i==3:
-                print("25 points. third try")
+                print("Correct. attempt 3")
+            elif i==4:
+                print("Correct. attempt 4")
+            elif i==5:
+                print("Correct. attempt 5")
+            elif i==6:
+                print("Correct. attempt 6")
+            elif i==7:
+                print("Correct. attempt 7")
+            elif i==8:
+                print("Correct. attempt 8")
+            elif i == 9:
+                print("Correct. attempt 9")
+            elif i==10:
+                print("Correct. attempt 10")
+
             exit_app()
             return
 
 
 
-        elif i<3:
+        elif i<10:
             if x>y:
                 y=int(input("Higher. Try again: "))
             elif x<y:
@@ -92,29 +105,27 @@ def easy_game():
 
 
 def mid_game():
-    x = random.randint(1, 50)
-    y = int(input("Enter your first guess (1 to 50): "))
-    for i in range(1,7):
-        if x == y:
-            if i == 1:
-                print("150 points. first try")
+    x = random.randint(1, 100)
+    y = int(input("Enter your first guess (1 to 100): "))
+    for i in range(1,6):
+        if x==y:
+            if i==1:
+                print("Correct. attempt 1")
                 exit_app()
-            elif i == 2:
-                print("100 points. second try")
-            elif i == 3:
-                print("50 points. third try")
-            elif i == 4:
-                print("25 points. fourth try")
-            elif i== 5:
-                print("10 points. fifth try")
-            else:
-                print("5 points. sixth try")
+            elif i==2:
+                print("Correct. attempt 2")
+            elif i==3:
+                print("Correct. attempt 3")
+            elif i==4:
+                print("Correct. attempt 4")
+            elif i==5:
+                print("Correct. attempt 5")
             exit_app()
             return
 
 
 
-        elif i < 7:
+        elif i < 5:
             if x > y:
                 y = int(input("Higher. Try again: "))
             elif x < y:
@@ -125,7 +136,33 @@ def mid_game():
     exit_app()
 
 def hard_game():
-    print("hard")
+    x = random.randint(1, 100)
+    y = int(input("Enter your first guess (1 to 100): "))
+    for i in range(1, 4):
+        if x == y:
+            if i == 1:
+                print("Correct. attempt 1")
+                exit_app()
+            elif i == 2:
+                print("Correct. attempt 2")
+            elif i == 3:
+                print("Correct. attempt 3")
+
+
+            exit_app()
+            return
+
+
+
+        elif i < 3:
+            if x > y:
+                y = int(input("Higher. Try again: "))
+            elif x < y:
+                y = int(input("Lower. Try again: "))
+
+    print("***You lose***")
+    print("Number was ", x)
+    exit_app()
 
 
 
