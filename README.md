@@ -9,8 +9,7 @@ Guess Game is a fun CLI application where the player tries to guess a randomly g
 ## Features
 
 * Random number generation
-* Multiple guessing attempts
-* Score system
+* Multiple levels
 * User-friendly command-line interface
 * Replay option
 
@@ -42,10 +41,11 @@ python main.py
 ## How to Play
 
 1. Start the game.
-2. Enter a guess when prompted.
-3. The game checks your answer.
-4. Points are awarded based on the number of attempts.
-5. Try to achieve the highest score possible.
+2. Choose your level.
+3. Enter a guess when prompted.
+4. The game checks your answer.
+   
+
 
 ## Project Roadmap
 
@@ -55,7 +55,7 @@ https://roadmap.sh/projects/number-guessing-game
 
 ## Future Improvements
 
-* Difficulty levels
+* Multiplayer System.
 * High score system
 * Colored terminal output
 * Save scores to a file
