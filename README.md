@@ -49,7 +49,7 @@ python main.py
 
 ## Project Roadmap
 
-This project is based on the Task Tracker project roadmap:
+This project is based on the NUmber Guessing Game project roadmap:
 
 https://roadmap.sh/projects/number-guessing-game
 
